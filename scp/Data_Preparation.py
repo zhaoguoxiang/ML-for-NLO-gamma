@@ -1,6 +1,4 @@
 from Molecule_Generation import smigen3
-
-
 from gjf_Generation import gjfgen
 import os
 
