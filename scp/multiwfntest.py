@@ -16,6 +16,8 @@ def getgamma(gamma_path):
         return {name:gamma_value}
 
     logfiles_gamma_path = list(Path(gamma_path).rglob('*.log'))
-    gamma_list = [mulgamma(file) for file in logfiles_gamma_path]
+    #gamma_list = [mulgamma(file) for file in logfiles_gamma_path]
+    gamma_list = map(mulgamma,logfiles_gamma_path)
+    return list(gamma_list)
 
-    return gamma_list
+print(getgamma('./gamma/Sn2'))
