@@ -17,7 +17,7 @@ def mdgen(title, smifile, data_path):
         smiles.append(a[b].strip('\n'))
 
     mols = [Chem.MolFromSmiles(smi) for smi in smiles]
-
+    mols = Chem.MolFromInchi('')
     if __name__ == "__main__":
         freeze_support()
 
@@ -62,4 +62,5 @@ smifile = smigen3(title, data_path)
 
 # 生成gjf文件
 gjfgen(title, smifile,opt_path,keywords=opt_keywords_sc71468)
+
 
