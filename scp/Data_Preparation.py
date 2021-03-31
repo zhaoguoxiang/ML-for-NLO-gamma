@@ -17,7 +17,6 @@ def mdgen(title, smifile, data_path):
         smiles.append(a[b].strip('\n'))
 
     mols = [Chem.MolFromSmiles(smi) for smi in smiles]
-    mols = Chem.MolFromInchi('')
     if __name__ == "__main__":
         freeze_support()
 
