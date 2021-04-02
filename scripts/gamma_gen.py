@@ -18,6 +18,9 @@ def getgamma(log_path):
     return name,gamma_value
 
 def getallgamma(gamma_path,data_path,idx_keywords='*.log'):
+    '''
+    TODO: need a better name the output file
+    '''
     if type(gamma_path) is str:
         gamma_path = Path(gamma_path)
     #the variable `gamma_path` is a string, but type of `data_path` is a str
